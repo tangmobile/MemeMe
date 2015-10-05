@@ -56,7 +56,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         self.subscribeToKeyboardNotifications()
-        self.subscribeToKeyboardHideNotifications()
+        //self.subscribeToKeyboardHideNotifications()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+        self.subscribeToKeyboardHideNotifications()
         
     }
     
